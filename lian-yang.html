@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——莲羊</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+header{
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.5);
+    position:relative;
+}
+header h1{font-size:2.6rem;margin:0;letter-spacing:.05em;}
+.back-btn{
+    position:absolute;
+    left:20px;top:50%;transform:translateY(-50%);
+    background:#fff;color:#111;
+    padding:8px 18px;border-radius:30px;
+    font-weight:700;text-decoration:none;
+    transition:.3s;
+}
+.back-btn:hover{background:#ff0000;color:#fff;}
+.card{
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    background:rgba(0,0,0,.65);
+    border-radius:12px;
+    line-height:1.9;
+    font-size:1.15rem;
+}
+.card img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+    border-radius:8px;
+    margin-bottom:30px;
+}
+@media(max-width:600px){
+    header h1{font-size:2rem;}
+    .card{padding:25px 15px;}
+}
+</style>
+</head>
+<body>
+<header>
+    <a class="back-btn" href="now.html">← 返回</a>
+    <h1>莲羊</h1>
+</header>
+
+<section class="card">
+    <img src="images/莲羊.jpg" alt="莲羊">
+    <p>
+        四川青年艺术家莲羊，将岩彩画传统的技法加入现代语言，实现了传承基础上的再创新。在敦煌壁画走向没落的多年后，莲羊重走丝绸之路，看着壁画中优雅的菩萨像、曼妙的山水、悲天悯人的故事，她用贝壳磨粉，蘸一抹孔雀石的绿，撒一把金箔，拿起手中的五色笔还原昔日辉煌。
+    </p>
+    <p>
+        从小开始画画，曾是国内一流插画师的莲羊，潜心研究这门千年前的技艺，积极开展岩彩教育，以一己之力让越来越多的人了解到了中国这项传统艺术。
+    </p>
+</section>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记起源</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+/* ===== 基础 ===== */
+html,body{margin:0;height:100%;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+
+/* 顶部黑色遮罩 */
+.hero{
+    height:200px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:rgba(0,0,0,.5);
+}
+.hero h1{font-size:4rem;letter-spacing:.1em;margin:0 0 .2em;}
+.hero p{font-size:1.2rem;margin:0;}
+
+/* 剩余区域整块半透白底 */
+.main-content{
+    /* 删掉 flex:1 */
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(5px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:40px 20px;
+    /* 新增：让它根据内容高度自动伸缩 */
+    margin:auto;          /* 垂直水平居中 */
+}
+
+/* 按钮 */
+.btn-row{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:40px;
+}
+.btn-row a{
+    background:#fff;
+    color:#222;
+    font-weight:700;
+    font-size:1.1rem;
+    padding:15px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:.3s;
+    box-shadow:0 2px 4px rgba(0,0,0,.15);
+}
+.btn-row a:hover{background:#ff0000;color:#fff;}
+
+/* 介绍文字 */
+.intro{
+    max-width:900px;
+    line-height:1.9;
+    font-size:1.1rem;
+    color:#fff;
+}
+.intro h2{margin-bottom:20px;text-align:center;font-size:2rem;}
+
+/* ===== 新增：左右图片 ===== */
+.side-pic{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    width:120px;
+    height:160px;
+    object-fit:cover;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+    transition:.3s;
+}
+.side-pic:hover{transform:translateY(-50%) scale(1.05);}
+.side-pic.left{left:20px;}
+.side-pic.right{right:20px;}
+
+/* ===== 新增：微信悬浮窗 ===== */
+.wx-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+}
+.wx-btn{
+    width:42px;
+    height:42px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    z-index:9999;
+}
+.wx-btn img{width:30px;height:30px;}
+.wx-popup{
+    display:none;
+    position:absolute;
+    bottom:60px;
+    right:0;
+    background:#fff;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.wx-popup img{width:160px;height:160px;}
+/* 左右 3 张图，共 6 张 */
+.side-gallery{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    z-index:99;          /* 确保在白色半透明底之上 */
+}
+.side-gallery.left{left:20px;}
+.side-gallery.right{right:20px;}
+
+.side-gallery img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:6px;
+    box-shadow:0 2px 6px rgba(0,0,0,.4);
+    cursor:pointer;
+    transition:.3s;
+}
+.side-gallery img:hover{transform:scale(1.08);}
+/* ===== 基础样式（保持你原有的） ===== */
+
+.scroll-gallery{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    width:100px;
+    height:auto;
+    max-height:70vh;
+    overflow:hidden;
+    z-index:999;
+    background:rgba(0,0,0,.15);
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.scroll-gallery.left{left:10px;}
+.scroll-gallery.right{right:10px;}
+
+.loop-container{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    transition:transform .5s linear;
+}
+.scroll-gallery img{
+    width:100%;
+    border-radius:4px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+ <!-- 开场全屏轮播背景 + 固定文字 -->
+<div id="cover" style="
+  position:fixed;inset:0;z-index:9999;
+  cursor:pointer;
+">
+  <!-- 背景图片层 -->
+  <div id="bgSlider" style="position:absolute;inset:0;"></div>
+
+  <!-- 文字层（始终居中） -->
+  <div style="
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.7);
+  ">
+    <h1 style="font-size:4rem;letter-spacing:.1em;">岩彩的故事</h1>
+    <p style="font-size:1.2rem;margin-top:.5em;">
+      在「石头记」的漫游中，听见岩与彩的低语，看见时间沉淀的光芒
+    </p>
+    <span style="margin-top:1.5rem;font-size:1rem;">点击或按任意键进入</span>
+  </div>
+</div>
+
+<script>
+/* 1. 图片列表（放你自己的） */
+const slides = ['images/bg1.jpg',
+                'images/bg2.jpeg',
+                'images/bg3.jpg',
+                'images/荒芜的风景.jpg',
+                'images/瀑布.png',
+                'images/寂中风月.png',
+                'images/燕子花图屏风.png',
+                'images/扎基拉姆（十）.png'];
+const slider = document.getElementById('bgSlider');
+
+/* 2. 创建 img 并插入 */
+slides.forEach(src=>{
+  const img=document.createElement('img');
+  img.src=src;
+  img.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s';
+  slider.appendChild(img);
+});
+
+/* 3. 无限淡入淡出轮播 */
+let idx=0;
+const imgs=slider.children;
+imgs[idx].style.opacity=1;
+setInterval(()=>{
+  imgs[idx].style.opacity=0;
+  idx=(idx+1)%imgs.length;
+  imgs[idx].style.opacity=1;
+},3000);
+
+/* 4. 点击/按键进入主站 */
+const cover=document.getElementById('cover');
+function enter(){
+  cover.style.transition='opacity .8s';
+  cover.style.opacity=0;
+  setTimeout(()=>cover.remove(),800);
+}
+cover.addEventListener('click',enter);
+document.addEventListener('keydown',enter);
+</script>
+    <!-- 顶部 -->
+    <div class="hero">
+        <h1>岩彩的故事</h1>
+        <p>在「石头记」的漫游中，听见岩与彩的低语，看见时间沉淀的光芒</p>
+    </div>
+
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+        <nav class="btn-row">
+            <a href="ancient.html">古代壁画名士</a>
+            <a href="recent.html">近代复兴先驱</a>
+            <a href="now.html">国内当代艺术家</a>
+            <a href="abroad.html">国外艺术家</a>
+        </nav>
+
+        <section class="intro">
+            <h2>岩彩</h2>
+岩彩，是取天然矿物研磨成色，以动物胶或植物胶为媒介，绘制于石壁、纸、绢或木板之上的绘画体系。其历史可追溯至三万年前法国肖维岩洞的野牛壁画，中国则在旧石器时代山顶洞人已用赤铁矿粉末涂染饰品。汉唐之际，岩彩随佛教东传而大放异彩：敦煌莫高窟四万五千平方米壁画历经千年风沙仍熠熠生辉，朱砂、石青、石绿、赭石与金箔交织出「七宝庄严」的极乐净土；唐代吴道子擅用焦墨勾勒、薄施赭石，所作《地狱变相》令长安屠夫「惧而改业」。宋元以降，水墨文人画兴起，岩彩式微；直至二十世纪初，张大千、常书鸿、谢稚柳等先贤赴敦煌临摹，才使这门古老技艺重见天日。<br>
+ <br>进入当代，岩彩被赋予新的生命：艺术家们将矿物颜料与丙烯、树脂、金属箔、玻璃微珠等综合材料并置，结合拼贴、泼洒、打磨、烧灼等现代手法，突破传统壁画的平面叙事，呈现出丰富的肌理与光影。胡明哲、张小鹭、陈文光等中国艺术家以都市霓虹、工业废墟、宇宙星尘为母题，让千年石色与今日文明对话。<br> <br>  
+岩彩之美，在于「石性」：矿物晶体对光的折射随角度变幻，呈现微妙闪烁；历经岁月，不仅不褪色，反而因氧化与包浆更显醇厚。它是时间的艺术——原料需经过选矿、淘洗、研磨、漂澄、分级、配胶六道工序；创作需打底、起稿、上色、晕染、沥粉、贴金、刻线、罩染多重步骤。  
+今天，岩彩已不只是壁画的代名词，更成为装置、雕塑、数字影像的灵感源泉。它提醒我们：色彩可以来自大地，也可以超越大地；传统可以活在当代，更可以走向未来。<br> <br>愿你在「石头记」的漫游中，听见岩与彩的低语，看见时间沉淀的光芒。<br> <br>
+        </section>
+    </div>
+
+<div class="wx-float">
+    <div class="wx-btn" onclick="toggleWx()">
+        <img src="images/weixin1.jpg" alt="微信" style="width:26px;height:26px;border-radius:50%;">
+    </div>
+    <div class="wx-popup" id="wxPopup">
+        <img src="images/WEIXIN2.JPG" alt="公众号二维码">
+        <p style="margin:5px 0 0;font-size:12px;color:#333;text-align:center;">扫码关注</p>
+    </div>
+</div>
+<!-- 左右循环画廊 -->
+<div id="leftGallery" class="scroll-gallery left">
+    <div class="loop-container" id="leftLoop"></div>
+</div>
+<div id="rightGallery" class="scroll-gallery right">
+    <div class="loop-container" id="rightLoop"></div>
+</div>
+
+<!-- JS 必须放在 </body> 之前 -->
+<script>
+// 左边画廊：图片 + 链接
+const leftData = [
+  { img: 'images/WUDAOZIBENREN.png', link: 'wu-daozi.html' },
+  { img: 'images/张大千.jpg', link: 'zhang-daqian.html' },
+  { img: 'images/常书鸿.jpg', link: 'chang-shuhong.html' },
+  { img: 'images/胡明哲.jpg', link: 'hu-mingzhe.html' },
+  { img: 'images/莲羊.jpg', link: 'lian-yang.html' },
+  { img: 'images/杜永卫.jpg', link: 'du-yongwei.html' },
+  { img: 'images/尾形光琳.jpg', link: 'wei-xingguanglin.html' },
+];
+
+// 右边画廊同理
+const rightData = [
+  { img: 'images/xrb.jpg', link: 'qian-zhubo.html' },
+  { img: 'images/加山又造.jpg', link: 'jia-shanyouzao.html' },
+  { img: 'images/杨子华benren.jpg', link: 'yang-zihua.html' },
+  { img: 'images/ouzhou.jpg', link: 'ouzhou.html' },
+  { img: 'images/横山大观.jpg', link: 'heng-shandaguan.html' }
+];
+
+function createLoop(containerId, data){
+    const box = document.getElementById(containerId);
+    let offset = 0;
+    const imgH = 80;
+
+    data.forEach(({ img: src, link }) => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.onclick = () => location.href = link;
+        box.appendChild(img);
+    });
+
+    // 无限循环
+    setInterval(()=>{
+        offset -= imgH;
+        if(offset <= -imgH * data.length) offset = 0;
+        box.style.transform = `translateY(${offset}px)`;
+    }, 2000);
+}
+createLoop('leftLoop', leftData);
+createLoop('rightLoop', rightData);
+</script>
+
+<!-- 微信悬浮窗 -->
+<div class="wx-float" style="position:fixed;right:20px;bottom:20px;z-index:9999;">
+  <div class="wx-btn" onclick="toggleWx()" style="width:42px;height:42px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25);">
+      <img src="images/weixin1.jpg" alt="微信" style="width:26px;height:26px;border-radius:50%;">
+  </div>
+  <div class="wx-popup" id="wxPopup" style="display:none;position:absolute;bottom:60px;right:0;background:#fff;padding:10px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);">
+      <img src="images/WEIXIN2.JPG" alt="公众号二维码" style="width:160px;height:160px;">
+      <p style="margin:5px 0 0;font-size:12px;color:#333;text-align:center;">扫码关注</p>
+  </div>
+</div>
+
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</body>
+</html>

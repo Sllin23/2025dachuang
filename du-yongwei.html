@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——杜永卫</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+header{
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.5);
+    position:relative;
+}
+header h1{font-size:2.6rem;margin:0;letter-spacing:.05em;}
+.back-btn{
+    position:absolute;
+    left:20px;top:50%;transform:translateY(-50%);
+    background:#fff;color:#111;
+    padding:8px 18px;border-radius:30px;
+    font-weight:700;text-decoration:none;
+    transition:.3s;
+}
+.back-btn:hover{background:#ff0000;color:#fff;}
+.card{
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    background:rgba(0,0,0,.65);
+    border-radius:12px;
+    line-height:1.9;
+    font-size:1.15rem;
+}
+.card img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+    border-radius:8px;
+    margin-bottom:30px;
+}
+@media(max-width:600px){
+    header h1{font-size:2rem;}
+    .card{padding:25px 15px;}
+}
+</style>
+</head>
+<body>
+<header>
+    <a class="back-btn" href="now.html">← 返回</a>
+    <h1>杜永卫</h1>
+</header>
+
+<section class="card">
+    <img src="images/杜永卫.jpg" alt="杜永卫">
+    <p>
+        杜永卫，九三学社社员，敦煌彩塑制作技艺非物质文化遗产传承人。40 余年来，他潜心研究敦煌彩塑，与飞天一起“飞翔”在艺术世界里，先后制作传统题材雕塑作品 300 余身，荣获“陇原工匠”“飞天工匠”等称号。
+    </p>
+    <p>
+        现为中国工美行业艺术大师、高级环艺设计师、教授。无论是之前 20 多年在莫高窟工作，还是后来 10 多年的民间奋斗，他始终初心不改，努力践行着一个“敦煌工匠”的本分，认真从事石窟彩塑艺术的研究、传承工作。
+    </p>
+</section>
+</body>
+</html>

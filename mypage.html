@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+  body{background:#f5f5f5;color:#333}
+  header{height:60vh;background:url(bg1.jpg) center/cover no-repeat;position:relative;color:#fff;display:flex;align-items:center;justify-content:center}
+  header::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.4)}
+  header .hero{position:relative;text-align:center}
+  header h1{font-size:3rem;letter-spacing:.1em}
+  header p{font-size:1.2rem;margin-top:.5rem}
+  nav{background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.1);position:sticky;top:0;z-index:10}
+  nav ul{display:flex;list-style:none;max-width:1200px;margin:auto}
+  nav li{flex:1;text-align:center}
+  nav a{display:block;padding:15px 0;color:#333;text-decoration:none;font-weight:600}
+  nav a:hover{background:#f1f1f1}
+  section{max-width:1200px;margin:40px auto;padding:0 20px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  .card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+  .card img{width:100%;height:160px;object-fit:cover}
+  .card h3{padding:15px 15px 5px}
+  .card p{padding:0 15px 15px;font-size:.9rem;color:#666}
+  footer{background:#222;color:#aaa;text-align:center;padding:30px 0;font-size:.9rem}
+  @media(max-width:600px){header h1{font-size:2rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <h1>岩彩的故事</h1>
+    <p>1233211234567</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#Ancient">古代壁画创作者</a></li>
+    <li><a href="#Recent">近代复兴先驱</a></li>
+    <li><a href="#ticket">国内当代艺术家</a></li>
+    <li><a href="#service">国外艺术家</a></li>
+  </ul>
+</nav>
+
+<section id="Ancient">
+  <h2>古代壁画创作者</h2>
+  <p>吴道子（约680年—759年），又名道玄，唐代著名画家，画史尊称画圣。其壁画作品在题材、技法和风格上都极具开创性，对后世壁画艺术影响深远。</p>
+  <div class="cards">
+    <div class="card">
+      <img src="WUDAOZI1.png" alt="">
+      <h3>吴道子</h3>
+      <p>在《地狱变相》中，他仅以焦墨勾出狰狞鬼卒与沸腾油鼎，再于关键处薄罩赭石、朱砂，画面顿时阴森迫人，竟使长安屠夫“惧而改业”。</p>
+    </div>
+    <div class="card">
+      <img src="{{图片2}}" alt="">
+      <h3>{{标题2}}</h3>
+      <p>{{描述2}}</p>
+    </div>
+    <div class="card">
+      <img src="{{图片3}}" alt="">
+      <h3>{{标题3}}</h3>
+      <p>{{描述3}}</p>
+    </div>
+  </div>
+</section>
+
+<section id="Recent">
+  <h2>近代复兴先驱</h2>
+  <ul>
+    <li><strong>张大千</strong>：张大千先生是中国画坛的艺术巨匠，是在国内外都具有影响力的艺术大师。他的作品体现了深厚的传统艺术底蕴和对民族艺术的强烈自信，在二十世纪中国画坛具有典型意义。张大千游历世界，获得巨大的国际声誉，被西方艺坛赞为"东方之笔"，又被称为“临摹天下名画最多的画家”。</li>
+    <li><strong>常书鸿</strong>：常书鸿（1904—1994）是中国敦煌艺术保护与研究的奠基者，被誉为“敦煌守护神”。他出生于浙江杭州，1927年赴法国里昂国立美术专科学校学习油画，作品曾入选法国沙龙展。1936年归国后任教于国立北平艺专。1943年，他放弃优渥的都市生活，带领首批团队抵达荒芜的敦煌莫高窟，建立“国立敦煌艺术研究所”（敦煌研究院前身），在无水无电、风沙肆虐的环境中开启长达半个世纪的守护工作。</li>
+  </ul>
+</section>
+
+<section id="Now">
+  <h2>当代大家</h2>
+  <ul>
+    <li>
+        <strong>胡明哲</strong>：中国当代艺术家，中央美术学院实验艺术系教授、硕士研究生导师，曾任中国美术家协会综合材料绘画艺术委员会副主任。1975年毕业于首都师范大学美术系，1988年获中央美术学院国画系硕士学位，1997-1998年赴欧洲艺术考察 。1996年提出“岩彩”概念并推动其在当代艺术中的发展，主持策划19次全国性岩彩主题群展，编著有《岩彩画艺术》《中国岩彩绘画概论》等教材。长期致力于岩彩画创作与教学，以天然矿物色为媒介，融合传统壁画技法与当代视觉语言。作品《都市幻影》系列通过玻璃幕墙镜像反思城市化进程，曾参展北京双年展、中国美术馆“无问西东邀请展”等。
+    </li>
+    </ul>
+    <a href="https://humingzhe.artron.net/" style="display:inline-block;background:#ff6b00;color:#fff;padding:10px 20px;border-radius:4px;text-decoration:none;margin-top:10px">介绍网站</a>
+</section>
+
+<section id="Abroad">
+  <h2>国际</h2>
+  <ul>
+    <li><strong>日本艺术家</strong>1.尾形光琳
+尾形光琳（Ogata Korin，1658—1716）作为日本江户时代琳派的核心巨匠，其在岩彩领域的艺术成就达到了前所未有的高度，将日本装饰性绘画推向了新的美学巅峰。他深谙矿物颜料的物质特性，并以其天才般的感性，将群青、绿青、朱砂等天然岩彩与金银箔的金属质感交织融合，创造出极富韵律与视觉张力的画面。</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 岩彩大创 版权所有
+</footer>
+
+</body>
+</html>

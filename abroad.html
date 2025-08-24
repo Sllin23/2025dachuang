@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——国外艺术家</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{margin:0;padding:0;height:100%;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    background-color:#000;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+.wrapper{background:rgba(0,0,0,.55);min-height:100vh;display:flex;flex-direction:column;}
+header{position:sticky;top:0;background:rgba(0,0,0,.7);backdrop-filter:blur(5px)}
+nav ul{display:flex;list-style:none;margin:0;padding:0}
+nav li{flex:1;text-align:center}
+nav a{display:block;padding:15px;color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{background:rgba(255,255,255,.15)}
+section{max-width:1000px;margin:auto;padding:40px 20px;line-height:1.8}
+h2{margin-bottom:20px;font-size:2rem}
+.card{background:#fff;color:#333;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.card img{width:100%;height:180px;object-fit:cover}
+footer{margin-top:auto;background:rgba(0,0,0,.7);text-align:center;padding:15px 0;font-size:.9rem}
+
+/* 卡片链接样式 */
+.card-link{color:#333;text-decoration:none}
+.card-link:hover{opacity:.9}
+.wx-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+}
+.wx-btn{
+    width:42px;
+    height:42px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    z-index:9999;
+}
+.wx-btn img{width:30px;height:30px;}
+.wx-popup{
+    display:none;
+    position:absolute;
+    bottom:60px;
+    right:0;
+    background:#fff;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.wx-popup img{width:160px;height:160px;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ancient.html" >古代</a></li>
+        <li><a href="recent.html">近代</a></li>
+        <li><a href="now.html">当代</a></li>
+        <li><a href="abroad.html" class="current">国外</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>国外艺术家</h2>
+    <p>尾形光琳（Ogata Korin，1658—1716）作为日本江户时代琳派的核心巨匠，其在岩彩领域的艺术成就达到了前所未有的高度，将日本装饰性绘画推向了新的美学巅峰。</p>
+    <p>横山大观（1868-1958）是日本近代绘画史上的巨匠，作为日本美术院的创立者之一，他的一生致力于将东方精神与日本民族情感通过绘画进行现代表达，其艺术实践对日本画从传统向现代的转型起到了决定性的作用。</p>
+    <p>加山又造（Kayama Matazo，1927-2004）是日本战后现代日本画领域最具革新精神与国际影响力的巨匠之一，其艺术生涯以其惊人的技术多样性、对古典的深刻理解与现代性表达的完美融合而著称，尤其在岩彩的运用上开创了前所未有的新局面。</p>
+    <p>千住博（Senju Hiroshi）是当代国际上最负盛名的日本画家之一，他以其极具辨识度的“瀑布”系列作品革新了岩彩这一古老绘画材料的现代表现形式，并将其推向了世界艺术舞台。</p>
+    <p>安塞尔姆·基弗（Anselm Kiefer，1945— ）虽非东方岩彩画家，却是西方艺术史上最深刻地践行“岩彩精神”的巨匠——他将大地本身的矿物质转化为承载历史、神话与苦难的史诗性媒介，在物质的毁灭与重生中寻找绘画的神性。基弗的作品突破了二维绘画的界限，将铅、沙土、灰烬、水泥、稻草等粗粝材料转化为承载历史与记忆的媒介。</p>
+  
+
+    <!-- 两行卡片：3-2 分布 -->
+    <div style="display:flex;flex-direction:column;align-items:center;gap:30px;margin-top:40px">
+      <!-- 第一行：3 张 -->
+      <div style="display:flex;gap:30px;justify-content:center;flex-wrap:wrap">
+        <a href="wei-xingguanglin.html" class="card-link">
+          <div class="card" style="width:260px">
+            <img src="images/WEIXINGGUANGLIN1.png" alt="尾形光琳">
+            <div style="padding:15px"><h3>《燕子花图》</h3><p>琳派经典的金色背景与深蓝燕子花，灵感源于《伊势物语》。</p></div>
+          </div>
+        </a>
+
+        <a href="heng-shandaguan.html" class="card-link">
+          <div class="card" style="width:260px">
+            <img src="images/生生流转(局部）.jpg" alt="横山大观">
+            <div style="padding:15px"><h3>《生生流转》（局部）</h3><p>朦胧天光水色，展现东方“新朦胧主义”意境。</p></div>
+          </div>
+        </a>
+
+        <a href="jia-shanyouzao.html" class="card-link">
+          <div class="card" style="width:260px">
+            <img src="images/寂中风月.png" alt="加山又造">
+            <div style="padding:15px"><h3>《寂中风月》</h3><p>融合超现实、立体主义手法的当代日本岩彩革新。</p></div>
+          </div>
+        </a>
+      </div>
+
+      <!-- 第二行：2 张（居中） -->
+      <div style="display:flex;gap:30px;justify-content:center;flex-wrap:wrap">
+        <a href="qian-zhubo.html" class="card-link">
+          <div class="card" style="width:260px">
+            <img src="images/瀑布.png" alt="千住博">
+            <div style="padding:15px"><h3>《瀑布》</h3><p>以岩彩重塑瀑布光影，把古老材料推向国际舞台。</p></div>
+          </div>
+        </a>
+
+        <a href="ouzhou.html" class="card-link">
+          <div class="card" style="width:260px">
+            <img src="images/荒芜的风景.jpg" alt="安塞尔姆·基弗">
+            <div style="padding:15px"><h3>《荒芜的风景》</h3><p>铅、灰烬、水泥等粗粝媒介承载历史与神性的史诗。</p></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  </script>
+
+<!-- 微信悬浮窗 -->
+<div class="wx-float" style="position:fixed;right:20px;bottom:20px;z-index:9999;">
+  <div class="wx-btn" onclick="toggleWx()" style="width:42px;height:42px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25);">
+      <img src="images/weixin1.jpg" alt="微信" style="width:26px;height:26px;border-radius:50%;">
+  </div>
+  <div class="wx-popup" id="wxPopup" style="display:none;position:absolute;bottom:60px;right:0;background:#fff;padding:10px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);">
+      <img src="images/WEIXIN2.JPG" alt="公众号二维码" style="width:160px;height:160px;">
+      <p style="margin:5px 0 0;font-size:12px;color:#333;text-align:center;">扫码关注</p>
+  </div>
+</div>
+
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+  <footer>© 2025 岩彩大创 版权所有</footer>
+</div>
+</body>
+</html>

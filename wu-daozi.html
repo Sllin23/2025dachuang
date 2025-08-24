@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——吴道子</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+/* 1. 全屏背景（绝对路径，确保能找到） */
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+
+/* 2. 顶部导航 */
+header{
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.5);
+    position:relative;
+}
+header h1{font-size:2.6rem;margin:0;letter-spacing:.05em;}
+.back-btn{
+    position:absolute;
+    left:20px;top:50%;transform:translateY(-50%);
+    background:#fff;color:#111;
+    padding:8px 18px;border-radius:30px;
+    font-weight:700;text-decoration:none;
+    transition:.3s;
+}
+.back-btn:hover{background:#ff0000;color:#fff;}
+
+/* 3. 内容卡片（半透明黑底 + 白字，确保可见） */
+.card{
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    background:rgba(0,0,0,.65);   /* 半透明黑底，白字自然可见 */
+    border-radius:12px;
+    line-height:1.9;
+    font-size:1.15rem;
+}
+.card img{
+    width:100%;
+    height:auto;                /* 不裁切，完整显示 */
+    max-height:none;            /* 去掉限制 */
+    object-fit:contain;         /* 完整显示，不留空白 */
+    border-radius:8px;
+    margin-bottom:30px;
+}
+@media(max-width:600px){
+    header h1{font-size:2rem;}
+    .card{padding:25px 15px;}
+}
+.scroll-gallery{
+    position:fixed;
+    top:50%;
+    transform:translateY(-50%);
+    width:40px;          /* 一指宽 */
+    height:70vh;         /* 高度自定 */
+    overflow:hidden;
+    z-index:2;           /* 低于中央内容 */
+    background:transparent; /* 去掉底色 */
+}
+.scroll-gallery.left{left:10px;}
+.scroll-gallery.right{right:10px;}
+.scroll-gallery img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:4px;
+    margin-bottom:4px;
+    cursor:pointer;
+}
+.main-content{
+    max-width:calc(100% - 120px); /* 左右各 40px + 10px 间隔 */
+    margin:0 auto;
+}
+</style>
+</head>
+<body>
+<header>
+    <a class="back-btn" href="ancient.html">← 返回</a>
+    <h1>吴道子</h1>
+</header>
+
+<section class="card">
+    <img src="images/WUDAOZIBENREN.png" alt="吴道子壁画">
+    <p>吴道子（约680年—759年），又名道玄，唐代著名画家，画史尊称画圣。其壁画作品在题材、技法和风格上都极具开创性，对后世壁画艺术影响深远。</p>
+    <p><br>
+其壁画作品在题材、技法和风格上都极具开创性，对后世壁画艺术影响深远。
+吴道子一生绘制寺观壁画三百余堵，长安、洛阳的宫观寺庙中尽是其恢宏手笔。他笔下的仙界，并非遥不可及——在河北曲阳北岳庙德宁殿的巨幅壁画中，天地山川、云雷雨师、万国神灵，皆以天然矿石研磨的朱砂、石青、石绿赋彩，再施以沥粉贴金，层层叠染。这种以天然矿物为基底的“岩彩”技法，不仅赋予壁画千年不褪的瑰丽，更在吴道子“焦墨勾线、淡彩微染”的“吴装”风格中，形成一种奇妙的张力——线条如风雷疾走，色彩如云霞轻敷，在富丽堂皇中透出简远空灵。
+吴道子对岩彩的革新，更在于其对“色”的哲学性节制。唐代壁画主流崇尚李思训式的青绿重彩，以孔雀石研制的石绿铺陈金碧山水，浓烈如织锦。而吴道子却反其道而行——他常只完成墨骨线描，设色交由弟子翟琰、张藏补全。这种分工并非随意，实则是以线为魂、以色为韵的自觉。在《地狱变相》中，他仅以焦墨勾出狰狞鬼卒与沸腾油鼎，再于关键处薄罩赭石、朱砂，画面顿时阴森迫人，竟使长安屠夫“惧而改业”。这种“略施微染”的吴装新格，将岩彩从装饰性赋色升华为精神性表达，矿物颜料的永恒质感与墨线的瞬时应激在此达成神性共振。</p>
+</section>
+</body>
+</html>
