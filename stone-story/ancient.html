@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——古代壁画</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;          
+    background-color:#000;         
+    color:#fff;                     
+}
+
+.wrapper{
+    background:rgba(0,0,0,0.55);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+.wrapper{background:rgba(0,0,0,.55);min-height:100vh;display:flex;flex-direction:column;}
+header{position:sticky;top:0;background:rgba(0,0,0,.7);backdrop-filter:blur(5px)}
+nav ul{display:flex;list-style:none;margin:0;padding:0}
+nav li{flex:1;text-align:center}
+nav a{display:block;padding:15px;color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{background:rgba(255,255,255,.15)}
+section{max-width:1000px;margin:auto;padding:40px 20px;line-height:1.8}
+h2{margin-bottom:20px;font-size:2rem}
+.card{background:#fff;color:#333;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.card img{width:100%;height:180px;object-fit:cover}
+footer{margin-top:auto;background:rgba(0,0,0,.7);text-align:center;padding:15px 0;font-size:.9rem}
+.demo-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;   /* 顶部对齐 */
+  justify-content: center;   /* 水平居中 */
+  gap: 50px;                 /* 左右间距 */
+  flex-wrap: nowrap;         /* 强制不换行 */
+  margin: auto;
+  max-width: 1000px;         /* 放宽最大宽度，防止换行 */
+  padding: 0 20px;
+}
+
+.demo-card {
+  flex: 0 0 450px; /* 固定宽度，防止伸缩 */
+  height: 500px;   /* 统一高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 让按钮贴底 */
+}
+
+.card-title{
+  font-size:2rem;
+  margin:0 0 15px;
+  letter-spacing:.05em;
+}
+
+.card-img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.card-text{
+  font-size:1.15rem;
+  line-height:1.8;
+  margin:20px 0;
+}
+
+.card-link{
+  display:inline-block;
+  background:(0,0,0,rgba(255, 255, 255, 0.7));
+  color:#fff;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+.card-link:hover{background:#d00000;}
+.wx-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+}
+.wx-btn{
+    width:42px;
+    height:42px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    z-index:9999;
+}
+.wx-btn img{width:30px;height:30px;}
+.wx-popup{
+    display:none;
+    position:absolute;
+    bottom:60px;
+    right:0;
+    background:#fff;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.wx-popup img{width:160px;height:160px;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ancient.html" class="current">古代</a></li>
+        <li><a href="recent.html">近代</a></li>
+        <li><a href="now.html">当代</a></li>
+        <li><a href="abroad.html">国外</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>古代岩彩名士</h2>
+    <p>吴道子（约680年—759年），又名道玄，唐代著名画家，画史尊称画圣。<br> <br>
+       杨子华，北齐画家，曾任直阁将军、员外散骑常侍，为北齐武成帝高湛宫廷御用画家，世称“画圣”<br>
+<section class="demo-row">
+<!-- 示例卡片区 -->
+<section class="demo-section">
+  <!-- 吴道子卡片 -->
+  <div class="demo-card">
+    <h2 class="card-title">《地狱变相》· 吴道子</h2>
+    <img class="card-img" src="images/WUDAOZI1.png" alt="地狱变相">
+    <p class="card-text">
+      吴道子仅以焦墨勾出狰狞鬼卒与沸腾油鼎，再于关键处薄罩赭石、朱砂，画面顿阴森迫人，竟使长安屠夫“惧而改业”。<br>
+      这种“略施微染”的吴装新格，将岩彩从装饰性赋色升华为精神性表达，矿物颜料的永恒质感与墨线的瞬时应激在此达成神性共振。
+    </p>
+    <a href="wu-daozi.html" class="card-link">查看详情</a>
+  </div>
+
+  <!-- 杨子华卡片 -->
+  <div class="demo-card">
+    <h2 class="card-title">《出行图》· 杨子华</h2>
+    <img class="card-img" src="images/杨子华.jpg" alt="出行图">
+    <p class="card-text">
+      杨子华的绘画风格在《出行图》中得到了淋漓尽致的体现。画面中的人物形象丰满圆润，线条流畅而富有张力，色彩鲜艳而和谐。<br>
+      他特别擅长描绘贵族人物和车马，这种技艺在《出行图》中得到了完美展现。画面中的车马生动逼真，仿佛能听到马匹的嘶鸣声，感受到车轮的滚动声。
+    </p>
+    <a href="yang-zihua.html" class="card-link">查看详情</a>
+  </div>
+</section>
+<!-- 微信悬浮窗 -->
+<div class="wx-float" style="position:fixed;right:20px;bottom:20px;z-index:9999;">
+  <div class="wx-btn" onclick="toggleWx()" style="width:42px;height:42px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25);">
+      <img src="images/weixin1.jpg" alt="微信" style="width:26px;height:26px;border-radius:50%;">
+  </div>
+  <div class="wx-popup" id="wxPopup" style="display:none;position:absolute;bottom:60px;right:0;background:#fff;padding:10px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);">
+      <img src="images/WEIXIN2.JPG" alt="公众号二维码" style="width:160px;height:160px;">
+      <p style="margin:5px 0 0;font-size:12px;color:#333;text-align:center;">扫码关注</p>
+  </div>
+</div>
+
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</section>
+    </div>
+  </section>
+
+  <footer>© 2025 岩彩大创 版权所有</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——张大千</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+/* 1. 全屏背景 */
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+
+/* 2. 顶部导航 */
+header{
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.5);
+    position:relative;
+}
+header h1{font-size:2.6rem;margin:0;letter-spacing:.05em;}
+.back-btn{
+    position:absolute;
+    left:20px;top:50%;transform:translateY(-50%);
+    background:#fff;color:#111;
+    padding:8px 18px;border-radius:30px;
+    font-weight:700;text-decoration:none;
+    transition:.3s;
+}
+.back-btn:hover{background:#ff0000;color:#fff;}
+
+/* 3. 内容卡片 */
+.card{
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+    background:rgba(0,0,0,.65);
+    border-radius:12px;
+    line-height:1.9;
+    font-size:1.15rem;
+}
+.card img{
+    width:100%;
+    height:auto;
+    max-height:none;
+    object-fit:contain;
+    border-radius:8px;
+    margin-bottom:30px;
+}
+@media(max-width:600px){
+    header h1{font-size:2rem;}
+    .card{padding:25px 15px;}
+}
+</style>
+</head>
+<body>
+<header>
+    <a class="back-btn" href="recent.html">← 返回</a>
+    <h1>张大千</h1>
+</header>
+
+<section class="card">
+    <img src="images/张大千本人.jpg" alt="张大千">
+    <p>
+        张大千先生是中国画坛的艺术巨匠，是在国内外都具有影响力的艺术大师。他的作品体现了深厚的传统艺术底蕴和对民族艺术的强烈自信，在二十世纪中国画坛具有典型意义。张大千游历世界，获得巨大的国际声誉，被西方艺坛赞为“东方之笔”，又被称为“临摹天下名画最多的画家”。
+    </p>
+    <p>
+        1941 年至 1943 年，张大千率弟子赴敦煌莫高窟，耗时三年临摹了北魏至五代的 276 幅壁画。这一经历成为他艺术生涯的转折点。在敦煌，他直面千年石窟中朱砂、石青、石绿等矿物颜料的原始应用，惊叹于其“沉厚如大地，瑰丽似星河”的质感。尤其如《摹敦煌晚唐供养菩萨》中金箔与岩彩的交织技法，让他深刻认识到矿物色的表现力，促使他从文人水墨转向重彩体系。
+    </p>
+    <p>
+        张大千对岩彩的革新体现在材料研发上。他亲自参与颜料制作：将粗颗粒石青、石绿研磨分级，按粒径分层使用以增强画面层次；恢复唐代“贴金”工艺，在泼彩未干时嵌入金箔，模拟敦煌壁画的金属光泽。其晚年巨作《庐山图》以矿物色为骨架，通过石绿、朱砂的堆叠与泼墨的渗化，重构了青绿山水的现代形态。
+    </p>
+    <p>
+        张大千的实践直接启发了后续岩彩艺术的复兴。他打破“水墨为上”的传统观念，证明矿物颜料可承载现代表现力。其弟子何海霞继承其重彩技法，而台湾画家刘国松则受泼彩启发发展水墨实验。日本画家平山郁夫称其“重新点亮了东方色彩的基因”。
+    </p>
+</section>
+</body>
+</html>

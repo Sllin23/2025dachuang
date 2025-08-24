@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——当代艺术家</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;          /* 完整覆盖、不变形 */
+    background-color:#000;          /* 图片未加载时兜底 */
+    color:#fff;                     /* 全局默认白色字 */
+}
+/* 让文字区域半透底，方便阅读 */
+.wrapper{
+    background:rgba(0,0,0,0.55);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+.wrapper{background:rgba(0,0,0,.55);min-height:100vh;display:flex;flex-direction:column;}
+header{position:sticky;top:0;background:rgba(0,0,0,.7);backdrop-filter:blur(5px)}
+nav ul{display:flex;list-style:none;margin:0;padding:0}
+nav li{flex:1;text-align:center}
+nav a{display:block;padding:15px;color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{background:rgba(255,255,255,.15)}
+section{max-width:1000px;margin:auto;padding:40px 20px;line-height:1.8}
+h2{margin-bottom:20px;font-size:2rem}
+.card{background:#fff;color:#333;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.card img{width:100%;height:180px;object-fit:cover}
+footer{margin-top:auto;background:rgba(0,0,0,.7);text-align:center;padding:15px 0;font-size:.9rem}
+.wx-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+}
+.wx-btn{
+    width:42px;
+    height:42px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    z-index:9999;
+}
+.wx-btn img{width:30px;height:30px;}
+.wx-popup{
+    display:none;
+    position:absolute;
+    bottom:60px;
+    right:0;
+    background:#fff;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.wx-popup img{width:160px;height:160px;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ancient.html" class="current">古代</a></li>
+        <li><a href="recent.html">近代</a></li>
+        <li><a href="now.html">当代</a></li>
+        <li><a href="abroad.html">国外</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <section>
+  <!-- 保留的原始三段文字 -->
+  <h2>当代艺术家</h2>
+  <p>胡明哲，中国当代艺术家，中央美术学院实验艺术系教授、硕士研究生导师，曾任中国美术家协会综合材料绘画艺术委员会副主任。</p>
+  <p>莲羊，本名吴洋，出生于四川达州，先后毕业于四川美院附中（高中）、中央美术学院（学士）、多摩美术大学（硕士）。岩彩艺术研究者，当代艺术家，原供职于中华人民共和国文化部。</p>
+  <p>杜永卫是九三学社社员，敦煌彩塑制作技艺非物质文化遗产传承人。40余年，杜永卫潜心研究敦煌彩塑，与飞天一起“飞翔”在艺术世界里，先后制作传统题材雕塑作品300余身，荣获“陇原工匠”“飞天工匠”等称号。</p>
+
+  <!-- 一行三列、可点击跳转的卡片 -->
+  <div style="display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin-top:40px">
+    <!-- 胡明哲 -->
+    <a href="hu-mingzhe.html" style="text-decoration:none;color:#333">
+      <div class="card" style="width:280px;height:100%;display:flex;flex-direction:column">
+        <img src="images/读 之一.jpg" alt="胡明哲">
+        <div style="padding:15px;flex:1">
+          <h3>《读 之一》·胡明哲</h3>
+          <p>作品《都市幻影》系列通过玻璃幕墙镜像反思城市化进程，曾参展北京双年展、中国美术馆“无问西东邀请展”等</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- 莲羊 -->
+    <a href="lian-yang.html" style="text-decoration:none;color:#333">
+      <div class="card" style="width:280px;height:100%;display:flex;flex-direction:column">
+        <img src="images/扎基拉姆（十）.png" alt="莲羊">
+        <div style="padding:15px;flex:1">
+          <h3>《扎基拉姆（十）》·莲羊</h3>
+          <p>莲羊从2015年开始创作的岩彩画，每年大年初五前为扎基拉姆女财神造像，2022年为第7年。</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- 杜永卫 -->
+    <a href="du-yongwei.html" style="text-decoration:none;color:#333">
+      <div class="card" style="width:280px;height:100%;display:flex;flex-direction:column">
+        <img src="images/岩彩画杜永卫.jpg" alt="杜永卫">
+        <div style="padding:15px;flex:1">
+          <h3>杜永卫</h3>
+          <p>扎根敦煌40余年的雕塑家，省级非遗传承人，让敦煌古老彩塑技艺得以延续。</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+</script>
+
+<!-- 微信悬浮窗 -->
+<div class="wx-float" style="position:fixed;right:20px;bottom:20px;z-index:9999;">
+  <div class="wx-btn" onclick="toggleWx()" style="width:42px;height:42px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25);">
+      <img src="images/weixin1.jpg" alt="微信" style="width:26px;height:26px;border-radius:50%;">
+  </div>
+  <div class="wx-popup" id="wxPopup" style="display:none;position:absolute;bottom:60px;right:0;background:#fff;padding:10px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);">
+      <img src="images/WEIXIN2.JPG" alt="公众号二维码" style="width:160px;height:160px;">
+      <p style="margin:5px 0 0;font-size:12px;color:#333;text-align:center;">扫码关注</p>
+  </div>
+</div>
+
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+  <footer>© 2025 岩彩大创 版权所有</footer>
+</div>
+</body>
+</html>

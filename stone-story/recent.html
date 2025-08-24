@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>石头记——近代复兴先驱</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;          
+    background-color:#000;         
+    color:#fff;                     
+}
+
+.wrapper{
+    background:rgba(0,0,0,0.55);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+html,body{height:100%;margin:0;}
+body{
+    background:url('images/bg1.jpg') no-repeat center center fixed;
+    background-size:cover;
+    color:#fff;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;
+}
+.wrapper{background:rgba(0,0,0,.55);min-height:100vh;display:flex;flex-direction:column;}
+header{position:sticky;top:0;background:rgba(0,0,0,.7);backdrop-filter:blur(5px)}
+nav ul{display:flex;list-style:none;margin:0;padding:0}
+nav li{flex:1;text-align:center}
+nav a{display:block;padding:15px;color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{background:rgba(255,255,255,.15)}
+section{max-width:1000px;margin:auto;padding:40px 20px;line-height:1.8}
+h2{margin-bottom:20px;font-size:2rem}
+.card{background:#fff;color:#333;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.card img{width:100%;height:180px;object-fit:cover}
+footer{margin-top:auto;background:rgba(0,0,0,.7);text-align:center;padding:15px 0;font-size:.9rem}
+.demo-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;   /* 顶部对齐 */
+  justify-content: center;   /* 水平居中 */
+  gap: 50px;                 /* 左右间距 */
+  flex-wrap: nowrap;         /* 强制不换行 */
+  margin: auto;
+  max-width: 1000px;         /* 放宽最大宽度，防止换行 */
+  padding: 0 20px;
+}
+
+.demo-card {
+  flex: 0 0 450px; /* 固定宽度，防止伸缩 */
+  height: 500px;   /* 统一高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 让按钮贴底 */
+}
+
+.card-title{
+  font-size:2rem;
+  margin:0 0 15px;
+  letter-spacing:.05em;
+}
+
+.card-img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.card-text{
+  font-size:1.15rem;
+  line-height:1.8;
+  margin:20px 0;
+}
+
+.card-link{
+  display:inline-block;
+  background:(0,0,0,rgba(255, 255, 255, 0.7));
+  color:#fff;
+  padding:12px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+.card-link:hover{background:#d00000;}
+.wx-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:9999;
+}
+.wx-btn{
+    width:42px;
+    height:42px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    z-index:9999;
+}
+.wx-btn img{width:30px;height:30px;}
+.wx-popup{
+    display:none;
+    position:absolute;
+    bottom:60px;
+    right:0;
+    background:#fff;
+    padding:10px;
+    border-radius:8px;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.wx-popup img{width:160px;height:160px;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="ancient.html" class="current">古代</a></li>
+        <li><a href="recent.html">近代</a></li>
+        <li><a href="now.html">当代</a></li>
+        <li><a href="abroad.html">国外</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>近代复兴先驱</h2>
+    <p>张大千先生是中国画坛的艺术巨匠，是在国内外都具有影响力的艺术大师。他的作品体现了深厚的传统艺术底蕴和对民族艺术的强烈自信，在二十世纪中国画坛具有典型意义。张大千游历世界，获得巨大的国际声誉，被西方艺坛赞为"东方之笔"，又被称为“临摹天下名画最多的画家”。<br> <br>
+       常书鸿（1904—1994）是中国敦煌艺术保护与研究的奠基者，被誉为“敦煌守护神”。他出生于浙江杭州，1927年赴法国里昂国立美术专科学校学习油画，作品曾入选法国沙龙展。1936年归国后任教于国立北平艺专。1943年，他放弃优渥的都市生活，带领首批团队抵达荒芜的敦煌莫高窟，建立“国立敦煌艺术研究所”（敦煌研究院前身），在无水无电、风沙肆虐的环境中开启长达半个世纪的守护工作。<br>
+<section class="demo-row">
+<!-- 示例卡片区 -->
+<section class="demo-section">
+  <!-- 张大千卡片 -->
+  <div class="demo-card">
+    <h2 class="card-title">《敦煌供养人》· 张大千</h2>
+    <img class="card-img" src="images/敦煌供养人.jpg" alt="敦煌供养人">
+    <p class="card-text">
+      《敦煌供养人》是张大千1943年后创作的仕女画代表作，体现其敦煌壁画临摹成果对艺术风格的转型影响。该作品通过丰腴人物造型与藻井纹样服饰，突破明清纤弱画风，重现唐代审美范式。2025年经木版水印技艺复刻后，成为首幅大型传统印制作品，标志着木版水印技艺在传统印制领域迈出了突破性的一步。现存于安徽师范大学美术学院藏品体系，是其院藏作品中具有学术价值的重要藏品</p>
+    <a href="zhang-daqian.html" class="card-link">查看详情</a>
+  </div>
+
+  <!-- 杨子华卡片 -->
+  <div class="demo-card">
+    <h2 class="card-title">常书鸿办公室</h2>
+    <img class="card-img" src="images/常书鸿办公室.jpg" alt="常书鸿办公室">
+    <p class="card-text">
+      1950年代，常书鸿主导莫高窟加固工程，在周恩来总理特批下采用“锚固+混凝土挡墙”技术挽救危崖。他同时将敦煌岩彩引入现代美术教育：在中央工艺美院开设敦煌图案课，指导学生用矿物色临摹藻井纹样；其著作《敦煌壁画中的历代技法》首次分析北魏至元代的设色规律，指出唐代以“叠染法”实现矿物色的渐变过渡。这些实践直接启发了1970年代北京机场壁画群对岩彩的集体复兴。</p>
+    <a href="chang-shuhong.html" class="card-link">查看详情</a>
+  </div>
+</section>
+<!-- 微信悬浮窗 -->
+<div class="wx-float" style="position:fixed;right:20px;bottom:20px;z-index:9999;">
+  <div class="wx-btn" onclick="toggleWx()" style="width:42px;height:42px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25);">
+      <img src="images/weixin1.jpg" alt="微信" style="width:26px;height:26px;border-radius:50%;">
+  </div>
+  <div class="wx-popup" id="wxPopup" style="display:none;position:absolute;bottom:60px;right:0;background:#fff;padding:10px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.3);">
+      <img src="images/WEIXIN2.JPG" alt="公众号二维码" style="width:160px;height:160px;">
+      <p style="margin:5px 0 0;font-size:12px;color:#333;text-align:center;">扫码关注</p>
+  </div>
+</div>
+
+<script>
+function toggleWx(){
+    const pop = document.getElementById('wxPopup');
+    pop.style.display = pop.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</section>
+    </div>
+  </section>
+
+  <footer>© 2025 岩彩大创 版权所有</footer>
+</div>
+</body>
+</html>
